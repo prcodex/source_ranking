@@ -1,0 +1,108 @@
+# Source priority registry — starter file for a Brazilian macro / markets corpus.
+#
+# Edit this list to match your own corpus. Tag the top 5–15% of sources `high`,
+# obviously noisy sources `low`, leave the rest as `normal` (or omit them
+# entirely — untagged sources behave as `normal`).
+#
+# Maintain monthly: promote, demote, add new sources. See docs/03.
+
+sources:
+
+  # ─── Tier 1 — Brazilian sell-side macro desks ───────────────────────────
+  - id: itau_macro
+    priority: high
+    aliases: [itaumacro, itau_economia, itau_bba, itau_research]
+    notes: |
+      Itaú Macro Research. Daily morning note + monthly fiscal outlook.
+      Recommended canonical source for Selic, fiscal balance, BoP.
+
+  - id: bradesco_macro
+    priority: high
+    aliases: [bradescobr, bradesco_economia, bradesco_research]
+    notes: Bradesco Research desk. Strong on credit, consumer.
+
+  - id: xp_research
+    priority: high
+    aliases: [xpresearch, xp_investimentos, xpinvestimentos]
+    notes: XP Research. Equity-flow heavy; treat fiscal calls with care.
+
+  - id: btg_macro
+    priority: high
+    aliases: [btgpactual, btgresearch, btg_economia]
+    notes: BTG Pactual macro. Selic and FX coverage.
+
+  # ─── Tier 1 — Official / institutional ──────────────────────────────────
+  - id: bcb
+    priority: high
+    aliases: [bancocentral, BCB_Brasil, bcbbrasil, bancocentralbr]
+    notes: |
+      Banco Central do Brasil official. Copom minutes, governor speeches,
+      FX intervention announcements.
+
+  - id: fazenda
+    priority: high
+    aliases: [ministeriofazenda, ministeriodafazenda, ministerio_fazenda]
+    notes: Ministério da Fazenda. Fiscal policy authority.
+
+  - id: tesouro
+    priority: high
+    aliases: [tesouronacional, tesouro_nacional]
+    notes: Tesouro Nacional. Debt management announcements.
+
+  # ─── Tier 1 — Brazilian opinion / political coverage ────────────────────
+  - id: folha_mercado
+    priority: high
+    aliases: [folha, folhadespaulo, folhamercado]
+    notes: Folha de S.Paulo mercado section. Quality fiscal/political coverage.
+
+  - id: valor_economico
+    priority: high
+    aliases: [valor, valoreconomico, valor_econ]
+    notes: Valor Econômico. Daily economics + corporate desk.
+
+  - id: estadao_economia
+    priority: high
+    aliases: [estadao, oestadao, oestadaoeconomia]
+    notes: O Estado de S.Paulo economics. Solid political-economy coverage.
+
+  # ─── Tier 1 — International macro ───────────────────────────────────────
+  - id: goldman_sachs_research
+    priority: high
+    aliases: [gs, goldman, goldman_sachs, gs_research, gs_macro]
+    notes: Goldman global macro. Useful for EM allocation framing.
+
+  - id: jpmorgan_research
+    priority: high
+    aliases: [jpm, jpmorgan, jp_morgan, jpm_research]
+    notes: JPMorgan research. Cembalest views in particular.
+
+  - id: morgan_stanley_research
+    priority: high
+    aliases: [ms, morganstanley, morgan_stanley_em]
+    notes: Morgan Stanley EM team. Brazil-specific notes prioritized.
+
+  # ─── Tier 2 — Useful but variable quality ───────────────────────────────
+  - id: infomoney
+    priority: normal
+    notes: Mainstream business news. Headline quality acceptable, depth varies.
+
+  - id: brazil_journal
+    priority: normal
+    aliases: [braziljournal]
+    notes: Boutique business journalism.
+
+  - id: monitor_mercantil
+    priority: normal
+
+  # ─── Tier 3 — Aggregators / commentary / demoted ────────────────────────
+  - id: randombr_curious
+    priority: low
+    notes: Retail commentator. High volume, intermittent signal.
+
+  - id: investing_brazil
+    priority: low
+    notes: Aggregator. Re-publishes headlines without value-add.
+
+  - id: zerohedge
+    priority: low
+    notes: Sensational framing. Demoted after Q1 review.
